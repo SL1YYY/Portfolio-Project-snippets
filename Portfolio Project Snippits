@@ -28,14 +28,3 @@ function applyDamage(player, damage)
     end
 end
 (This handles health reduction and triggers a KO when health hits zero. It's reusable and keeps combat smooth.)
-
-
-🏠 Home Life
-🧍 Player Nickname System Snippet
-
-game.ReplicatedStorage.SetNickname.OnServerEvent:Connect(function(player, nickname)
-    local tag = player:FindFirstChild("NicknameTag") or Instance.new("StringValue", player)
-    tag.Name = "NicknameTag"
-    tag.Value = nickname
-end)
-(This allows players to set nicknames in a roleplay game, storing them with the player for chat or UI display.)
